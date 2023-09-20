@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // disarium number:
+    function isDisariumNumber(num) {
+        const numStr = num.toString();
+        const sum = numStr.split('').reduce((acc, digit, index) => {
+            return acc + Math.pow(parseInt(digit), index + 1);
+        }, 0);
+        return sum === num;
+    }
+    let n = parseInt(prompt("enter a number:"))
+    console.log(isDisariumNumber(n));
+
+
+   
+
+
+
+
+</script>
+
+</html>

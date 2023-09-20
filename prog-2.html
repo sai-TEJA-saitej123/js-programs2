@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var isHappy = function (n) {
+        var seen = {};
+        while (n !== 1 && !seen[n]) {
+            seen[n] = true;
+            n = sumOfSquares(n);
+        }
+        return n === 1 ? true : false;
+    };
+
+    function sumOfSquares(numString) {
+        return numString.toString().split('').reduce(function (sum, num) {
+            return sum + Math.pow(num, 2);
+        }, 0);
+    };
+</script>
+
+</html>
